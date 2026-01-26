@@ -102,7 +102,7 @@
 .floating-badge {
   position: absolute;
   padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(249, 247, 243, 0.9);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 50px;
