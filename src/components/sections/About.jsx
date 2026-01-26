@@ -3,13 +3,13 @@ import React from 'react';
 const About = () => {
   return (
     <section id="about" className="section about-section">
-      <div className="about-bg-text">ABOUT ME</div>
+      <div className="about-bg-text reveal">ABOUT ME</div>
 
       <div className="about-container">
-        <div className="about-left">
+        <div className="about-left reveal-stagger">
           {/* <span className="section-number">01 — ABOUT</span> */}
           <h2 className="about-heading">
-            FullStack Developer <em>End-to-End Scalable Systems (UI → API)</em>
+            <span style={{ color: '#FFFFFF' }}>FullStack</span> Developer <em>End-to-End Scalable Systems <span style={{ color: '#FFFFFF' }}>(UI → API)</span></em>
           </h2>
           <div className="about-description">
             <p>

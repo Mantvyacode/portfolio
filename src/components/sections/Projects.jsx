@@ -33,8 +33,8 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section">
-      <h2>Selected Work</h2>
-      <div className="projects-grid">
+      <h2 className="reveal">Selected Work</h2>
+      <div className="projects-grid reveal-stagger">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
             <div>

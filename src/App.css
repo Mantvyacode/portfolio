@@ -1,15 +1,97 @@
+/* Initial Page Load Animations - Realistic Physics */
+@keyframes fallDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px) scaleY(1.1) rotateX(10deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px) scaleY(0.9) rotateX(-5deg);
+  }
+  80% {
+    transform: translateY(-5px) scaleY(1.05) rotateX(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1) rotateX(0deg);
+  }
+}
+
+.hero-name, .hero-code, .fall-desk, .fall-keyboard, .fall-mouse, .fall-monitor {
+  animation: fallDown 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.hero-name {
+  animation-delay: 0.1s;
+}
+
+.hero-code {
+  animation-delay: 0.3s;
+}
+
+/* Sequential Computer Setup Fall */
+.fall-desk {
+  animation-delay: 0.5s;
+}
+
+.fall-keyboard {
+  animation-delay: 0.7s;
+}
+
+.fall-mouse {
+  animation-delay: 0.9s;
+}
+
+.fall-monitor {
+  animation-delay: 1.1s;
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered reveals for children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-stagger.active > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.active > *:nth-child(1) { transition-delay: 0.1s; }
+.reveal-stagger.active > *:nth-child(2) { transition-delay: 0.2s; }
+.reveal-stagger.active > *:nth-child(3) { transition-delay: 0.3s; }
+.reveal-stagger.active > *:nth-child(4) { transition-delay: 0.4s; }
+.reveal-stagger.active > *:nth-child(5) { transition-delay: 0.5s; }
+
 /* Global Styles */
 :root {
-  --primary-color: #8B5E3C; /* Muted Bronze/Brown */
-  --secondary-color: #A67C52; /* Lighter Bronze */
-  --text-color: #4A3F35;
-  --heading-color: #2D241E;
-  --light-text: #8E8279;
-  --background: #F9F7F3; /* Refined Off-White (Ivory) */
-  --section-bg: #F2EFE9; /* Nuanced Off-White (Cream) */
+  --primary-color: #1A1A1A; /* Sophisticated Deep Charcoal */
+  --secondary-color: #333333;
+  --text-color: #4A4A4A;
+  --heading-color: #111111;
+  --light-text: #707070;
+  --background: #F9F7F3;
+  --section-bg: #F2EFE9;
   --border-color: #E8E4DF;
-  --accent-color: #8B5E3C;
-  --box-shadow: 0 4px 20px rgba(139, 94, 60, 0.06);
+  --accent-color: #1A1A1A;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -21,6 +103,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for the fixed navbar */
 }
 
 body {
@@ -86,8 +169,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   background-color: var(--background);
   border-bottom: 1px solid var(--border-color);
-  transition: var(--transition);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
   padding: 1rem 0;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
 }
 
 .nav-content {
@@ -313,12 +400,12 @@ h1, h2, h3, h4, h5, h6 {
 .about-section {
   position: relative;
   overflow: hidden;
-  padding: 4rem 6rem 6rem; /* Further reduced top padding */
+  padding: 4rem 6rem 6rem;
   background-color: var(--primary-color);
-  color: #FFFFFF;
-  min-height: auto; /* Remove fixed min-height to tighten space */
+  color: #D1D5DB; /* Soft gray instead of pure white */
+  min-height: auto;
   display: flex;
-  align-items: flex-start; /* Align content to the top */
+  align-items: flex-start;
 }
 
 .about-bg-text {
@@ -389,7 +476,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
   opacity: 0.9;
   text-align: left !important;
-  color: #FFFFFF !important;
+  color: #D1D5DB !important; /* Matches section color */
 }
 
 .about-dot {

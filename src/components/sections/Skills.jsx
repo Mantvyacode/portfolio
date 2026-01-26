@@ -4,15 +4,15 @@ const Skills = () => {
   const skillCategories = [
     {
       title: 'Frontend',
-      skills: ['React.js', 'JavaScript (ES6+)', 'TypeScript', 'HTML5 & CSS3', 'Tailwind CSS', 'Responsive Design']
+      skills: ['React.js', 'JavaScript','HTML5 & CSS3', 'Tailwind CSS', 'Responsive Design']
     },
     {
       title: 'Backend',
-      skills: ['Node.js', 'Express.js', 'RESTful APIs', 'Python', 'Database Design']
+      skills: ['PHP', 'Node.js', 'RESTful APIs', 'Database Design']
     },
     {
       title: 'Tools & Technologies',
-      skills: ['Git & GitHub', 'VS Code', 'Chrome DevTools', 'Figma', 'Webpack', 'Vite']
+      skills: ['Git & GitHub', 'VS Code', 'Chrome DevTools', 'Webpack', 'Vite']
     },
     {
       title: 'Soft Skills',
@@ -22,8 +22,8 @@ const Skills = () => {
 
   return (
     <section id="skills" className="section">
-      <h2>Tools of the Trade</h2>
-      <div className="skills-grid">
+      <h2 className="reveal">Tools of the Trade</h2>
+      <div className="skills-grid reveal-stagger">
         {skillCategories.map((category, index) => (
           <div key={index} className="skill-card">
             <h3>{category.title}</h3>
