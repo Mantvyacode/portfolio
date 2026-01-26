@@ -1,0 +1,269 @@
+/* Hero Container */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 6rem;
+}
+
+/* Hero Content - Left Side */
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 2rem;
+  line-height: 0.9;
+}
+
+.hero-name {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -4px;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.hero-code {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -4px;
+  color: brown
+  ;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--light-text);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+/* Hero 3D - Right Side */
+.hero-3d {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 500px;
+  perspective: 1000px;
+}
+
+/* 3D Computer Setup - CSS Only */
+/* 3D Computer Setup - SVG & CSS */
+.computer-setup {
+  position: relative;
+  width: 450px;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+.computer-setup svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
+}
+
+.screen-glow {
+  animation: screenPulse 4s ease-in-out infinite;
+}
+
+.svg-code-lines {
+  animation: codeScrollSvg 4s linear infinite;
+}
+
+@keyframes screenPulse {
+  0%, 100% { opacity: 1; filter: brightness(1); }
+  50% { opacity: 0.9; filter: brightness(1.2); }
+}
+
+@keyframes codeScrollSvg {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0; }
+}
+
+/* Floating Badges */
+.floating-badge {
+  position: absolute;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.floating-badge::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.badge-1 {
+  top: 10%;
+  right: -10%;
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.badge-2 {
+  top: 45%;
+  right: -15%;
+  animation: float 5.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.badge-3 {
+  bottom: 10%;
+  right: -5%;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-container {
+    padding: 0 3rem;
+    gap: 3rem;
+  }
+
+  .computer-setup {
+    width: 300px;
+    height: 250px;
+  }
+
+  .floating-badge {
+    font-size: 0.8125rem;
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    align-items: center;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+  }
+
+  .hero-3d {
+    min-height: 400px;
+    width: 100%;
+  }
+
+  .computer-setup {
+    width: 250px;
+    height: 200px;
+  }
+
+  .badge-1 {
+    top: 5%;
+    right: 5%;
+  }
+
+  .badge-2 {
+    top: 50%;
+    right: 0%;
+  }
+
+  .badge-3 {
+    bottom: 5%;
+    right: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 0 1.5rem;
+    gap: 2rem;
+  }
+
+  .computer-setup {
+    width: 200px;
+    height: 150px;
+  }
+
+  .floating-badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .floating-badge::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .hero-name,
+  .hero-code {
+    font-size: 2.5rem;
+  }
+}

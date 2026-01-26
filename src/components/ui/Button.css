@@ -1,0 +1,82 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: inherit;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Button Variants */
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: #4b5563;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #374151;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+
+.btn-outline:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+.btn-text {
+  background: none;
+  color: #2563eb;
+  padding: 0.5rem 0.75rem;
+}
+
+.btn-text:hover {
+  text-decoration: underline;
+}
+
+/* Button Sizes */
+.btn-small {
+  font-size: 0.875rem;
+  padding: 0.25rem 1rem;
+}
+
+.btn-medium {
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-large {
+  font-size: 1.125rem;
+  padding: 0.75rem 2rem;
+}
+
+/* Disabled State */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Focus State */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
