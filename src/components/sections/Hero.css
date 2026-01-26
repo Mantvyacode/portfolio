@@ -196,8 +196,8 @@
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column-reverse; /* Put 3D illustration on top for mobile */
-    padding: 0 2rem;
-    gap: 3rem;
+    padding: 0 1.5rem;
+    gap: 1.5rem; /* Reduced gap */
     text-align: center;
   }
 
@@ -217,7 +217,7 @@
   }
 
   .hero-3d {
-    min-height: 350px;
+    min-height: 280px; /* Reduced min-height */
     width: 100%;
   }
 
