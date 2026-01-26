@@ -16,7 +16,7 @@ const Logo = () => {
         fontFamily="Orbitron, sans-serif"
         fontSize="100"
         fontWeight="700"
-        fill="#121216"
+        fill="#E2E8F0"
       >
         M
       </text>

@@ -29,7 +29,7 @@
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
   letter-spacing: -4px;
-  color: var(--text-color);
+  color: var(--heading-color);
   text-transform: uppercase;
 }
 
@@ -102,13 +102,14 @@
 .floating-badge {
   position: absolute;
   padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(30, 41, 59, 0.8);
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--text-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   white-space: nowrap;
   z-index: 10;
 }
