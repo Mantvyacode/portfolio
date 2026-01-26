@@ -177,7 +177,6 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .hero-container {
     padding: 0 3rem;
@@ -185,8 +184,7 @@
   }
 
   .computer-setup {
-    width: 300px;
-    height: 250px;
+    width: 380px;
   }
 
   .floating-badge {
@@ -197,7 +195,7 @@
 
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column;
+    flex-direction: column-reverse; /* Put 3D illustration on top for mobile */
     padding: 0 2rem;
     gap: 3rem;
     text-align: center;
@@ -205,6 +203,9 @@
 
   .hero-content {
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-content h1 {
@@ -216,29 +217,17 @@
   }
 
   .hero-3d {
-    min-height: 400px;
+    min-height: 350px;
     width: 100%;
   }
 
   .computer-setup {
-    width: 250px;
-    height: 200px;
+    width: 320px;
   }
 
-  .badge-1 {
-    top: 5%;
-    right: 5%;
-  }
-
-  .badge-2 {
-    top: 50%;
-    right: 0%;
-  }
-
-  .badge-3 {
-    bottom: 5%;
-    right: 10%;
-  }
+  .badge-1 { top: 0%; right: 0%; }
+  .badge-2 { top: 40%; right: -5%; }
+  .badge-3 { bottom: 0%; right: 5%; }
 }
 
 @media (max-width: 480px) {
@@ -248,22 +237,21 @@
   }
 
   .computer-setup {
-    width: 200px;
-    height: 150px;
+    width: 260px;
+  }
+
+  .hero-3d {
+    min-height: 280px;
   }
 
   .floating-badge {
-    font-size: 0.75rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .floating-badge::before {
-    width: 6px;
-    height: 6px;
+    font-size: 0.7rem;
+    padding: 0.5rem 0.875rem;
   }
 
   .hero-name,
   .hero-code {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 12vw, 3rem);
+    letter-spacing: -2px;
   }
 }
