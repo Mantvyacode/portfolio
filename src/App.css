@@ -1,15 +1,15 @@
 /* Global Styles */
 :root {
   --primary-color: #3C83F6;
-  --secondary-color: #60a5fa;
-  --text-color: #E2E8F0;
-  --heading-color: #F8FAFC;
-  --light-text: #94A3B8;
-  --background: #0F172A;
-  --section-bg: #1E293B;
-  --border-color: #334155;
+  --secondary-color: #2563eb;
+  --text-color: #1A1A1A;
+  --heading-color: #050505;
+  --light-text: #666666;
+  --background: #FCFAF8;
+  --section-bg: #F5F2EE;
+  --border-color: #E8E4DF;
   --accent-blue: #3C83F6;
-  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
