@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1>
-            <span className="hero-name">MANTVYAA</span>
+            <span className="hero-name">MANTVYA</span>
             <span className="hero-code">CODE</span>
           </h1>
           <p>Full-Stack Dynamo powering scalable web innovations, electrifying user experiences, and everything in the dev pipeline.</p>
