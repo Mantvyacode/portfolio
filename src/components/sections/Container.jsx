@@ -6,12 +6,12 @@ const Container = () => {
     {
       title: 'Frontend',
       icon: <FaLanguage className="skill-icon" />,
-      skills: ['React.js', 'JavaScript', 'HTML5 & CSS','Tailwind CSS','Responsive Design']
+      skills: ['React.js', 'JavaScript', 'HTML5 & CSS', 'Tailwind CSS','Responsive Design']
     },
     {
       title: 'Backend',
       icon: <FaServer className="skill-icon" />,
-      skills: ['PHP', 'Node.js', 'Restful APIs', 'Database Des']
+      skills: ['PHP', 'Node.js', 'Restful APIs', 'Database Design']
     },
     {
       title: 'Tools & Technologies',
