@@ -21,19 +21,26 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section">
-      <h2 className="reveal">Tools of the Trade</h2>
-      <div className="skills-grid reveal-stagger">
-        {skillCategories.map((category, index) => (
-          <div key={index} className="skill-card">
-            <h3>{category.title}</h3>
-            <ul>
-              {category.skills.map((skill, idx) => (
-                <li key={idx}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <section id="skills" className="section skills-section-full">
+      <div className="skills-bg-text">MY SKILLS</div>
+      
+      <div className="skills-container-full">
+        <h2 className="skills-heading-full reveal">Tools of the Trade</h2>
+        <div className="skills-grid reveal-stagger">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="skill-row">
+              <div className="skill-row-number">{index + 1}</div>
+              <div className="skill-row-content">
+                <h3 className="skill-row-title">{category.title}</h3>
+                <div className="skill-row-items">
+                  {category.skills.map((skill, idx) => (
+                    <span key={idx} className="skill-item">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

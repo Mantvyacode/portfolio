@@ -8,6 +8,7 @@
   margin: 0 auto;
   width: 100%;
   padding: 0 6rem;
+  position: relative;
 }
 
 /* Hero Content - Left Side */
@@ -129,21 +130,21 @@
 
 .badge-1 {
   top: 10%;
-  right: -10%;
+  right: 5%;
   animation: float 5s ease-in-out infinite;
   animation-delay: 0s;
 }
 
 .badge-2 {
   top: 45%;
-  right: -15%;
+  right: 2%;
   animation: float 5.5s ease-in-out infinite;
   animation-delay: 0.5s;
 }
 
 .badge-3 {
   bottom: 10%;
-  right: -5%;
+  right: 8%;
   animation: float 6s ease-in-out infinite;
   animation-delay: 1s;
 }
