@@ -113,6 +113,7 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   background-color: var(--background);
+  overflow-x: hidden; /* Prevent horizontal scroll from full-width sections */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -124,6 +125,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   min-height: 100vh;
   padding-top: 80px; /* Space for fixed navbar */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .nav-menu {
@@ -396,16 +398,19 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2px;
 }
 
-/* About Section Refined */
+/* About Section Refined - Full Width */
 .about-section {
   position: relative;
   overflow: hidden;
-  padding: 4rem 6rem 6rem;
+  padding: 4rem 0 6rem;
   background-color: var(--primary-color);
   color: #D1D5DB; /* Soft gray instead of pure white */
   min-height: auto;
   display: flex;
   align-items: flex-start;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .about-bg-text {
@@ -428,6 +433,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-container {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 6rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
