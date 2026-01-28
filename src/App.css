@@ -611,9 +611,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
   width: 100%;
   box-sizing: border-box;
-} /* Content sits on top of bg text */
   text-align: left;
-}
+} /* Content sits on top of bg text */
 
 .section-number {
   font-size: 0.875rem;
