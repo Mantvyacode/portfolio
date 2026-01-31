@@ -1,22 +1,46 @@
 import React from 'react';
 
 const Skills = () => {
+  console.log("Skills component rendering...");
   const skillCategories = [
     {
-      title: 'Frontend',
-      skills: ['React.js', 'JavaScript','HTML5 & CSS3', 'Tailwind CSS', 'Responsive Design']
+      title: '!!! FRONTEND TEST !!!',
+      skills: [
+        { name: 'REACT TEST', icon: '⚛️' },
+        { name: 'JavaScript', icon: '🟨' },
+        { name: 'HTML5 & CSS3', icon: '🌐' },
+        { name: 'Tailwind CSS', icon: '🎨' },
+        { name: 'Responsive Design', icon: '📱' }
+      ]
     },
     {
       title: 'Backend',
-      skills: ['PHP', 'Node.js', 'RESTful APIs', 'Database Design']
+      skills: [
+        { name: 'PHP', icon: '🐘' },
+        { name: 'Node.js', icon: '🟢' },
+        { name: 'RESTful APIs', icon: '🔗' },
+        { name: 'Database Design', icon: '🗄️' }
+      ]
     },
     {
       title: 'Tools & Technologies',
-      skills: ['Git & GitHub', 'VS Code', 'Chrome DevTools', 'Webpack', 'Vite']
+      skills: [
+        { name: 'Git & GitHub', icon: '🐙' },
+        { name: 'VS Code', icon: '💻' },
+        { name: 'Chrome DevTools', icon: '🔧' },
+        { name: 'Webpack', icon: '📦' },
+        { name: 'Vite', icon: '⚡' }
+      ]
     },
     {
       title: 'Soft Skills',
-      skills: ['Problem Solving', 'Team Collaboration', 'Agile/Scrum', 'Communication', 'Time Management']
+      skills: [
+        { name: 'Problem Solving', icon: '🧩' },
+        { name: 'Team Collaboration', icon: '👥' },
+        { name: 'Agile/Scrum', icon: '🔄' },
+        { name: 'Communication', icon: '💬' },
+        { name: 'Time Management', icon: '⏰' }
+      ]
     }
   ];
 
@@ -34,7 +58,10 @@ const Skills = () => {
                 <h3 className="skill-row-title">{category.title}</h3>
                 <div className="skill-row-items">
                   {category.skills.map((skill, idx) => (
-                    <span key={idx} className="skill-item">{skill}</span>
+                    <span key={idx} className="skill-item">
+                      <span className="skill-icon">{skill.icon}</span>
+                      <span className="skill-name">{skill.name}</span>
+                    </span>
                   ))}
                 </div>
               </div>

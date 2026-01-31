@@ -6,7 +6,7 @@ const Layout = ({ children, activeSection, scrollToSection }) => {
   return (
     <div className="app">
       <Header activeSection={activeSection} scrollToSection={scrollToSection} />
-      <main style={{ width: '100%', overflowX: 'hidden' }}>
+      <main style={{ width: '100%', }}>
         {children}
       </main>
       <Footer />

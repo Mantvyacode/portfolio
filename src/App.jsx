@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import ScrollToTop from './components/ui/ScrollToTop';
@@ -37,13 +37,15 @@ function App() {
     }
   };
 
-  return (
-    <>
-      <Layout activeSection={activeSection} scrollToSection={scrollToSection}>
-        <Home />
-      </Layout>
-      <ScrollToTop />
-    </>
+  return React.createElement(
+    React.Fragment,
+    null,
+    React.createElement(
+      Layout,
+      { activeSection, scrollToSection },
+      React.createElement(Home)
+    ),
+    React.createElement(ScrollToTop)
   );
 }
 

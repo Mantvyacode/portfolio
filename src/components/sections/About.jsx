@@ -1,53 +1,70 @@
-import React from 'react';
+import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="section about-section">
-      <div className="about-bg-text reveal">ABOUT ME</div>
+    <section
+      id="about"
+      className="section about-section"
+      style={{
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* Background Text */}
+      <div
+        className="about-bg-text reveal"
+        style={{
+          position: "absolute",
+          top: "70%",
+          left: 0,
+          transform: "translateY(-50%)",
 
-      <div className="about-container">
+          width: "100%",
+          textAlign: "center",
+
+          fontSize: "14vw", // slightly reduced so full text fits
+          fontWeight: 950,
+          lineHeight: 1,
+
+          color: "rgba(255, 255, 255, 0.08)",
+          textTransform: "uppercase",
+          whiteSpace: "nowrap",
+
+          pointerEvents: "none",
+          userSelect: "none",
+          zIndex: 0,
+        }}
+      >
+        ABOUT ME
+      </div>
+
+      {/* Content */}
+      <div
+        className="about-container"
+        style={{
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
         <div className="about-left reveal-stagger">
-          {/* <span className="section-number">01 — ABOUT</span> */}
           <h2 className="about-heading">
-            <span style={{ color: '#FFFFFF' }}>FullStack</span> Developer <em>End-to-End Scalable Systems <span style={{ color: '#FFFFFF' }}>(UI → API)</span></em>
+            <span style={{ color: "#FFFFFF" }}>FullStack</span> Developer{" "}
+            <em>
+              End-to-End Scalable Systems{" "}
+              <span style={{ color: "#FFFFFF" }}>(UI → API)</span>
+            </em>
           </h2>
-          <div className="about-description">
-            <p>
-              Currently shaping digital experiences as a <strong>Full-Stack Developer</strong>,
-              where I lead the transition from complex requirements to fully integrated digital systems.
-              From backend architecture to real-time user tracking — I build what matters.
+
+          <div className="about-description" style={{ textAlign: "left", marginTop: "24px" }}>
+            <p style={{ textAlign: "left", marginTop: "24px" }}>
+              Currently enabling digital healthcare transformation at <strong>Kiran Multi Super Speciality Hospital</strong>, moving legacy paper workflows to integrated digital systems — from EMRs to real-time patient tracking.
             </p>
+
             <p>
-              With a focus on performance and hands-on experience across
-              React, Node.js, and cloud platforms — I bridge the gap between
-              ambitious ideas and production-ready solutions.
+              With a BCA background and hands-on experience in React, PHP, Node.js, and Databases Design, I build scalable, production-ready solutions.
             </p>
           </div>
-          {/* <div className="about-dot"></div> */}
         </div>
-
-        {/* <div className="about-right">
-          <div className="about-badges">
-            <span className="about-badge">1 Year Experience</span>
-            <span className="about-badge">Full-Stack</span>
-            <span className="about-badge">UI/UX Focus</span>
-          </div>
-
-          <div className="about-stats">
-            <div className="stat-item">
-              <span className="stat-number">10+</span>
-              <span className="stat-label">Projects Shipped</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">3+</span>
-              <span className="stat-label">Years Building</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">∞</span>
-              <span className="stat-label">Problems Solved</span>
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

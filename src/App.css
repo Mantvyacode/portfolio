@@ -1,3 +1,5 @@
+@import './styles/parallax.css';
+
 /* Initial Page Load Animations - Realistic Physics */
 @keyframes fallDown {
   0% {
@@ -495,6 +497,27 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
 }
 
+/* Unique fonts for each skill category */
+.skill-category:nth-child(1) .skill-category-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+}
+
+.skill-category:nth-child(2) .skill-category-title {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+}
+
+.skill-category:nth-child(3) .skill-category-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.skill-category:nth-child(4) .skill-category-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
 .skill-list {
   display: flex;
   flex-direction: column;
@@ -961,6 +984,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.2;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
 .skill-row-items {
@@ -970,18 +996,63 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skill-item {
-  background: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.95);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 0.9375rem;
   transition: var(--transition);
+  margin-bottom: 0.875rem;
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+/* Unique fonts for skill items in each category */
+.skill-category:nth-child(1) .skill-item {
+  font-family: 'Lato', sans-serif;
+}
+
+.skill-category:nth-child(2) .skill-item {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.skill-category:nth-child(3) .skill-item {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.skill-category:nth-child(4) .skill-item {
+  font-family: 'Raleway', sans-serif;
 }
 
 .skill-item:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
+  color: #f0f0f0;
+  transform: translateX(4px);
+}
+
+.skill-icon {
+  font-size: 1.4em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.4em;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.skill-icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  font-size: 1.1em;
+  color: white;
 }
 
 /* Original skill card styles (for backward compatibility) */
@@ -1021,7 +1092,7 @@ h1, h2, h3, h4, h5, h6 {
 .skill-card h3 {
   color: #FFFFFF;
   margin-bottom: 1.5rem;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   text-align: center;
   font-weight: 600;
 }
