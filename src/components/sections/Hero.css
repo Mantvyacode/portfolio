@@ -181,12 +181,12 @@
 
 @media (max-width: 1024px) {
   .hero-container {
-    padding: 0 3rem;
-    gap: 3rem;
+    padding: 0 clamp(2rem, 4vw, 3rem);
+    gap: clamp(2rem, 4vw, 3rem);
   }
 
   .computer-setup {
-    width: 380px;
+    width: clamp(320px, 40vw, 380px);
   }
 
   .floating-badge {
@@ -197,9 +197,9 @@
 
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column-reverse; /* Put 3D illustration on top for mobile */
-    padding: 0 1.5rem;
-    gap: 1.5rem; /* Reduced gap */
+    flex-direction: column-reverse;
+    padding: 0 clamp(1rem, 3vw, 1.5rem);
+    gap: clamp(1.5rem, 3vw, 2rem);
     text-align: center;
   }
 
@@ -219,12 +219,12 @@
   }
 
   .hero-3d {
-    min-height: 280px; /* Reduced min-height */
+    min-height: clamp(250px, 40vw, 280px);
     width: 100%;
   }
 
   .computer-setup {
-    width: 320px;
+    width: clamp(280px, 50vw, 320px);
   }
 
   .badge-1 { top: 0%; right: 0%; }
@@ -234,26 +234,26 @@
 
 @media (max-width: 480px) {
   .hero-container {
-    padding: 0 1.5rem;
-    gap: 2rem;
+    padding: 0 clamp(1rem, 2vw, 1.5rem);
+    gap: clamp(1.5rem, 3vw, 2rem);
   }
 
   .computer-setup {
-    width: 260px;
+    width: clamp(240px, 60vw, 260px);
   }
 
   .hero-3d {
-    min-height: 280px;
+    min-height: clamp(250px, 50vw, 280px);
   }
 
   .floating-badge {
-    font-size: 0.7rem;
-    padding: 0.5rem 0.875rem;
+    font-size: clamp(0.7rem, 2vw, 0.75rem);
+    padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.75rem, 2vw, 0.875rem);
   }
 
   .hero-name,
   .hero-code {
-    font-size: clamp(2rem, 12vw, 3rem);
+    font-size: clamp(2rem, 10vw, 2.5rem);
     letter-spacing: -2px;
   }
 }
