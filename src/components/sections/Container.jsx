@@ -49,8 +49,8 @@ const Container = () => {
   ];
 
   return (
-    <section className="section full-width-container">
-      {/* <div className="skills-bg-text">MY SKILLS</div> */}
+    <section className="section full-width-container" id="skills">
+      {<div className="skills-bg-text">MY SKILLS</div>}
       <div className="skills-container">
         <h2 className="skills-heading reveal">Tools to Integrate</h2>
         <div className="skills-grid">
