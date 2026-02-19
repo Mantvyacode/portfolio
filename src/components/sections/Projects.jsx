@@ -5,11 +5,11 @@ const Projects = () => {
     {
       id: 1,
       number: '01',
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with payment integration, inventory management, and real-time order tracking. Built with React, Node.js, and MongoDB.',
+      title: 'Discharge Summary Change',
+      description: 'A web application for changing discharge summaries. Built with React, PHP, and MySQL.',
       liveLink: '#',
       repoLink: '#',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe']
+      tags: ['React', 'PHP', 'MySQL']
     },
     {
       id: 2,
@@ -33,16 +33,31 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section">
-      <h2 className="reveal">Selected Work</h2>
-      <div className="projects-grid reveal-stagger">
+      <h2 className="reveal">Selected Projects</h2>
+      <div className="full-width-projects-container">
         {projects.map((project) => (
-          <div key={project.id} className="project-card">
-            <div>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="project-links">
-                <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <a href={project.repoLink} target="_blank" rel="noopener noreferrer">GitHub</a>
+          <div key={project.id} className={`full-width-project-card project-card-${project.id}`}>
+            <div className="project-content">
+              <div className="project-number">{project.number}</div>
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-subtitle"><em>Web Development</em></p>
+              <p className="project-description">{project.description}</p>
+              <div className="tech-stack">
+                {project.tags.map((tag, index) => (
+                  <span key={index} className="tech-tag">{tag}</span>
+                ))}
+              </div>
+              <a href={project.liveLink} className="view-project-link" target="_blank" rel="noopener noreferrer">
+                View Project →
+              </a>
+            </div>
+            <div className="project-image">
+              <div className="image-container">
+                <img 
+                  src={`https://placehold.co/600x400/1A1A1A/FFFFFF?text=${project.title.replace(/\s+/g, '+')}`} 
+                  alt={`${project.title} preview`} 
+                  className="project-preview"
+                />
               </div>
             </div>
           </div>

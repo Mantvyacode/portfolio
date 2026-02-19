@@ -8,6 +8,7 @@ const Container = () => {
       icon: <FaLanguage className="skill-icon" />,
       skills: [
         { name: 'React.js', icon: <FaReact /> },
+        { name: 'Next.js', icon: <FaReact /> },
         { name: 'JavaScript', icon: <FaJs /> },
         { name: 'HTML5 & CSS', icon: <><FaHtml5 /><FaCss3Alt /></> },
         { name: 'Tailwind CSS', icon: <FaCode /> },
